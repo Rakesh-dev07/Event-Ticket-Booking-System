@@ -4,6 +4,9 @@ A full-stack MERN application for event ticket booking with seat reservation, bo
 
 Built as part of a Full Stack Developer (MERN) Hiring Assignment.
 
+## Live Demo: https://your-vercel-app.vercel.app
+
+
 ---
 
 ## Features

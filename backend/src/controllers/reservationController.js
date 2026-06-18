@@ -35,7 +35,7 @@ export const reserveSeats = async (req, res) => {
     }
 
     const expiresAt = new Date(
-      Date.now() + 2 * 60 * 1000
+      Date.now() + 10 * 60 * 1000
     );
 
     await Seat.updateMany(
