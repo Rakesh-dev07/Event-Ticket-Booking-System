@@ -87,6 +87,7 @@ function RegisterPage() {
             type="password"
             name="password"
             placeholder="Password"
+            autoComplete="new-password"
             value={formData.password}
             onChange={handleChange}
             required

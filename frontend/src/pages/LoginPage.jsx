@@ -75,6 +75,7 @@ function LoginPage() {
             type="password"
             name="password"
             placeholder="Password"
+            autoComplete="current-password"
             value={formData.password}
             onChange={handleChange}
             required

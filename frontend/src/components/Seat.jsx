@@ -1,36 +1,36 @@
-function Seat({ seat, onSelect, isSelected }) {
-  let backgroundColor = "#22c55e"; // available
+function Seat({
+  seat,
+  onSelect,
+  isSelected,
+}) {
+  let color = "bg-green-500";
 
-  if (seat.status === "reserved") {
-    backgroundColor = "#eab308";
-  }
+  if (seat.status === "reserved")
+    color = "bg-yellow-500";
 
-  if (seat.status === "booked") {
-    backgroundColor = "#ef4444";
-  }
+  if (seat.status === "booked")
+    color = "bg-red-500";
 
-  if (isSelected) {
-    backgroundColor = "#3b82f6";
-  }
+  if (isSelected)
+    color = "bg-blue-500";
 
   return (
     <button
-      disabled={seat.status !== "available"}
+      disabled={
+        seat.status !== "available"
+      }
       onClick={() => onSelect(seat)}
-      style={{
-        width: "60px",
-        height: "60px",
-        margin: "5px",
-        border: "none",
-        borderRadius: "8px",
-        cursor:
-          seat.status === "available"
-            ? "pointer"
-            : "not-allowed",
-        backgroundColor,
-        color: "white",
-        fontWeight: "bold",
-      }}
+      className={`
+        ${color}
+        h-16
+        w-full
+        rounded-lg
+        text-white
+        font-semibold
+        transition
+        hover:scale-105
+        disabled:cursor-not-allowed
+      `}
     >
       {seat.seatNumber}
     </button>
